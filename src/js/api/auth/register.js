@@ -2,13 +2,13 @@ import { API_AUTH_REGISTER } from "../constants";
 import { headers } from "../headers";
 
 /**
- * Registers a new user by sending their data to the registration API.
- * Sends a post request to the API to register a new user. If sccessful the user is redirected to the login page.
- * @param {Object} userData - The registration data of the new user.
+ * Registers a new user by sending their details to the registration API.
+ * Sends a POST request to the API to create a new user. If successful, the user is redirected to the login page.
+ * @param {Object} userData - The new user's registration details.
  * @param {string} userData.name - The username.
  * @param {string} userData.email - The user's email.
  * @param {string} userData.password - The user's password.
- * @returns {Promise<void>} - A promise that resolves when the registration is complete.
+ * @returns {Promise<void>} - A promise that finishes when the registration is done.
  */
 
 export async function register({ name, email, password }) {
@@ -24,6 +24,7 @@ export async function register({ name, email, password }) {
       headers: headers(),
       body: JSON.stringify(body),
     });
+
     if (response.ok) {
       alert("User registered");
       window.location.href = "/auth/login/";

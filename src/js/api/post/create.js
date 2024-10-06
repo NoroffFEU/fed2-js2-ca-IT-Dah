@@ -2,19 +2,19 @@ import { API_SOCIAL_POSTS } from "../../api/constants";
 import { headers } from "../../api/headers";
 
 /**
- * Sends a request to the API to create a new post with the provided data.
+ * Sends a request to the API to create a new post with the given data.
  *
- * The post data includes the title, body, tags, and optional media (URL and alt text).
- * If the request is successful, the created post data is returned.
+ * The post includes a title, body, tags, and optional media (URL and alt text).
+ * If successful, the new post's data is returned.
  *
  * @param {Object} postData - The data for the new post.
- * @param {string} postData.title - The title of the post.
- * @param {string} postData.body - The body/content of the post.
- * @param {Array<string>} [postData.tags=[]] - An array of tags associated with the post.
- * @param {Object|null} [postData.media=null] - An optional media object containing URL and alt text.
- * @param {string} postData.media.url - The URL of the media (if an).
- * @param {string} postData.media.alt - The alt text for the media (if any).
- * @returns {Promise<Object>} - A promise that returns the data of the new post.
+ * @param {string} postData.title - The post's title.
+ * @param {string} postData.body - The post's content.
+ * @param {Array<string>} [postData.tags=[]] - Tags for the post.
+ * @param {Object|null} [postData.media=null] - Optional media (URL and alt text).
+ * @param {string} postData.media.url - The media URL (if any).
+ * @param {string} postData.media.alt - The media alt text (if any).
+ * @returns {Promise<Object>} - A promise that resolves to the new post data.
  * @throws {Error} - Throws an error if the request fails.
  */
 

@@ -1,8 +1,8 @@
 /**
- * Renders a list of user posts into the specified container in the DOM.
+ * Displays a list of user posts in the specified container in the DOM.
  *
- * @param {Array<Object>} userPosts - An array of post objects to render.
- * @param {string} id - The ID of the DOM element where posts will be rendered.
+ * @param {Array<Object>} userPosts - An array of post objects to display.
+ * @param {string} id - The ID of the DOM element where the posts will be shown.
  * @returns {void}
  */
 

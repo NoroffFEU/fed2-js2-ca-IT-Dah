@@ -4,10 +4,10 @@ import { onUpdatePost } from "../../ui/post/update";
 
 /**
  * Loads the post data into the edit form for the user to update.
- * It retrieves the post based on the postId, populates the form fields
- * with the current post data, and sets up the form submission handler.
+ * It fetches the post using the postId, fills the form with the current post data,
+ * and sets up the form submission handler.
  *
- * @returns {Promise<void>} - A promise that resolves when the post data is loaded.
+ * @returns {Promise<void>} - A promise that finishes when the post data is loaded.
  */
 
 authGuard();
@@ -29,11 +29,11 @@ async function loadPost() {
       );
     } else {
       console.error("Post is not found.");
-      document.body.innerHTML = "<p>Post not found</p>";
+      document.body.innerHTML = "<p>The post could not be found.</p>";
     }
   } catch (error) {
     console.error("Error loading post:", error);
-    document.body.innerHTML = "<p>Could not load post</p>";
+    document.body.innerHTML = "<p>Failed to load the post.</p>";
   }
 }
 

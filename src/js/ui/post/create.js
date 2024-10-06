@@ -1,13 +1,13 @@
 import { createPost } from "../../api/post/create";
 
 /**
- * Handles the form submission for creating a new post. Extracts form data, including title, body, tags, and media,
+ * Handles the new post form submission. Extracts data like title, body, tags, and media,
  * then calls the `createPost` function to send the data to the server.
  *
- * If the post is successfully created, the form is reset, and the user is redirected to the homepage after a delay.
+ * If the post is created successfully, the form is reset, and the user is redirected to the homepage after a short delay.
  *
- * @param {Event} event - The form submit event.
- * @returns {Promise<void>} - A promise that completes when the post is created.
+ * @param {Event} event - The form submission event.
+ * @returns {Promise<void>} - A promise that finishes when the post creation is complete.
  */
 
 export async function onCreatePost(event) {
@@ -22,17 +22,16 @@ export async function onCreatePost(event) {
 
   try {
     const newPost = await createPost({ title, body, tags, media });
-    console.log("Post created successfully:", newPost);
 
     document.getElementById("content").textContent =
-      "Post created successfully! Redirecting to homepage...";
+      "Post created successfully! Loading..."; //Redirecting to the homepage after creating a post
 
     event.target.reset();
 
     setTimeout(() => {
       window.location.href = "/";
-    }, 2500);
+    }, 1500);
   } catch (error) {
-    console.error("Error while creating post:", error);
+    console.error("Could not create post", error);
   }
 }

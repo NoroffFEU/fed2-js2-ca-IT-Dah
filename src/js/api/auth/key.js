@@ -2,12 +2,12 @@ import { API_AUTH_KEY } from "../constants";
 import { headers } from "../headers";
 
 /**
- * Fetches an API key from the server and stores it in local storage.
+ * Gets an API key from the server and saves it in local storage.
  *
- * The function sends a request to the API to retrieve an API key, and upon success,
- * it stores the key in the browser's `localStorage` for future use.
+ * This function sends a request to get an API key from the server.
+ * If successful, it saves the key in the browser's `localStorage` for later use.
  *
- * @returns {Promise<void>} - A promise that resolves when the API key is successfully fetched and stored.
+ * @returns {Promise<void>} - A promise that finishes when the key is fetched and saved.
  */
 
 export async function getKey() {

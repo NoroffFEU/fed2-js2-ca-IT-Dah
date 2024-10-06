@@ -1,11 +1,11 @@
 import { register } from "../../api/auth/register.js";
 
 /**
- * Handles the form submission for registrating a new user. Extracts user data from the form
- * and sends it to the `register` function to complete registration.
+ * Handles the registration form submission. Extracts user data from the form
+ * and sends it to the `register` function to complete the registration.
  *
- * @param {Event} event - The form submit event.
- * @returns {Promise<void>} - A promise that resolves when registrating a new user.
+ * @param {Event} event - The form submission event.
+ * @returns {Promise<void>} - A promise that resolves when the registration process starts.
  */
 
 export async function onRegister(event) {

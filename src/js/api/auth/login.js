@@ -2,13 +2,13 @@ import { API_AUTH_LOGIN } from "../constants";
 import { headers } from "../headers";
 
 /**
- * Logs a user in by sending their credentials to the authentication API.
- * If successful, the access token and user data are stored in localStorage, and the user is redirected to the homepage.
+ * Logs in a user by sending their email and password to the API.
+ * If successful, the access token and user info are saved in localStorage, and the user is redirected to the homepage.
  *
- * @param {Object} credentials - The user's login credentials.
+ * @param {Object} credentials - The user's login details.
  * @param {string} credentials.email - The user's email.
  * @param {string} credentials.password - The user's password.
- * @returns {Promise<void>} - A promise that resolves when the login process is complete.
+ * @returns {Promise<void>} - A promise that finishes when the login is done.
  */
 
 export async function login({ email, password }) {

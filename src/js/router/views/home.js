@@ -1,15 +1,16 @@
 import { authGuard } from "../../utilities/authGuard";
+import { setLogoutListener } from "../../ui/global/logout";
 import { readPosts } from "../../api/post/read";
 import { renderPosts } from "../../ui/post/renderPosts";
 
 /**
- * Fetches the latest posts and renders them to the DOM.
+ * Fetches the latest posts and displays them in the DOM.
  *
- * This function retrieves posts using the `readPosts` function,
- * and then displays the most recent 12 posts (or fewer if less than 12 posts exist).
- * If an error occurs during the fetch process, it logs the error to the console.
+ * This function gets posts using the `readPosts` function,
+ * and shows the most recent 12 posts (or fewer if there aren't 12).
+ * If an error happens, it logs the error in the console.
  *
- * @returns {Promise<void>} - A promise that resolves when the posts are fetched and rendered.
+ * @returns {Promise<void>} - A promise that finishes when the posts are fetched and displayed.
  */
 
 const seePosts = async () => {

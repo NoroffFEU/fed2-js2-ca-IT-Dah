@@ -5,7 +5,7 @@ import { headers } from "../headers";
  * Sends a DELETE request to the API to remove a post by its ID.
  *
  * @param {number|string} id - The ID of the post to delete.
- * @returns {Promise<boolean>} - A promise that resolves to `true` if the deletion was successful, or `false` if it failed.
+ * @returns {Promise<boolean>} - A promise that resolves to `true` if the deletion is successful, or `false` if it fails.
  */
 
 export async function deletePost(id) {
@@ -22,7 +22,7 @@ export async function deletePost(id) {
       return false;
     }
   } catch (error) {
-    console.error(`Could not delete post:`, error);
+    console.error(`Error deleting post:`, error);
     return false;
   }
 }

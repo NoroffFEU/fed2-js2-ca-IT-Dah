@@ -2,13 +2,13 @@ import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
 import { headers } from "../headers";
 
 /**
- * Fetches a specific post by its ID, including the author details.
+ * Fetches a specific post by its ID, including the author's details.
  *
- * Sends a GET request to the API to retrieve a post based on its ID. If successful,
- * the post data along with the author information is returned.
+ * Sends a GET request to the API to get a post by its ID. If successful,
+ * the post data and author information are returned.
  *
  * @param {number|string} id - The ID of the post to fetch.
- * @returns {Promise<Object|undefined>} - A promise that resolves to the post data if successful, or `undefined` if the fetch fails.
+ * @returns {Promise<Object|undefined>} - A promise that resolves to the post data if successful, or `undefined` if it fails.
  */
 
 export async function readPost(id) {

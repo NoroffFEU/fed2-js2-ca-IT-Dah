@@ -1,9 +1,9 @@
 import { API_KEY } from "./constants";
 
 /**
- * Generates the headers for API requests.
+ * Creates the headers for API requests.
  *
- * @returns {Headers} - The Headers object containing necessary headers for API calls.
+ * @returns {Headers} - The Headers object with the required headers for API calls.
  */
 
 const accessToken = localStorage.getItem("accessToken");

@@ -1,11 +1,11 @@
 import { login } from "../../api/auth/login.js";
 
 /**
- * Handles the form submission for user login. Extracts user credentials from the form
- * and passes them to the `login` function to authenticate the user.
+ * Handles the login form submission. Extracts the user's credentials from the form
+ * and sends them to the `login` function for authentication.
  *
- * @param {Event} event - The form submit event.
- * @returns {Promise<void>} - A promise that resolves when the signing in.
+ * @param {Event} event - The form submission event.
+ * @returns {Promise<void>} - A promise that resolves when the login process starts.
  */
 
 export async function onLogin(event) {
