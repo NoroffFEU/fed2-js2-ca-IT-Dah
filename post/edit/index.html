@@ -1,18 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
   </head>
-
   <body>
     <h1>Edit Post</h1>
 
     <form name="editPost">
-      <button>Edit Post</button>
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="Title" required />
+      </div>
+
+      <div>
+        <label for="body">Content</label>
+        <textarea name="body" placeholder="Content" required></textarea>
+      </div>
+
+      <div>
+        <label for="tags">Tag</label>
+        <input type="text" name="tags" placeholder="Tags" />
+      </div>
+
+      <div>
+        <label for="mediaUrl">Image link</label>
+        <input type="text" name="mediaUrl" placeholder="URL" />
+      </div>
+
+      <div>
+        <label for="mediaUrl">Alt for image</label>
+        <input type="text" name="mediaAlt" placeholder="Use few words" />
+      </div>
+
+      <button type="submit">Edit Post</button>
     </form>
   </body>
 </html>
