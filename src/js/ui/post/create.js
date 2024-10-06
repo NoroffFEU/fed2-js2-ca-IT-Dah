@@ -24,7 +24,7 @@ export async function onCreatePost(event) {
     const newPost = await createPost({ title, body, tags, media });
     console.log("Post created successfully:", newPost);
 
-    document.getElementById("message").textContent =
+    document.getElementById("content").textContent =
       "Post created successfully! Redirecting to homepage...";
 
     event.target.reset();
